@@ -32,7 +32,7 @@ class TestEmailSenderPlugin extends MantisPlugin {
 		$this->description = plugin_lang_get( 'description' );
 		$this->page = '';
 
-		$this->version = MANTIS_VERSION;
+		$this->version = '1.0.0';
 		$this->requires = [
 			'MantisCore' => '2.0.0',
 		];

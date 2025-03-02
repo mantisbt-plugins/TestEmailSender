@@ -36,7 +36,12 @@ class TestEmailSenderProvider extends EmailSender {
 		$ch = curl_init();
 
 		# Test URL
-		$t_url = plugin_config_get( 'webhook_url' );
+		plugin_push_current( 'TestEmailSender' );
+		try {
+			$t_url = plugin_config_get( 'webhook_url' );
+		} finally {
+			plugin_pop_current();
+		}
 
 		// Set cURL options
 		curl_setopt( $ch, CURLOPT_URL, $t_url );

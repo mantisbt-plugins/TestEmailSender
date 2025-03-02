@@ -68,7 +68,7 @@ class TestEmailSenderPlugin extends MantisPlugin {
 	 * @return EmailSender|null the email provider or null to defer to default provider
 	 */
 	public function create_provider( $p_event ) : ?EmailSender {
-		require_once( __DIR__ . '/TestEmailProvider.php' );
+		require_once( __DIR__ . '/TestEmailSenderProvider.php' );
 		return new TestEmailSenderProvider();
 	}
 }

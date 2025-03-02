@@ -9,6 +9,7 @@ Examples of such emails senders:
 - Sendgrid
 - Postmark
 - Mailgun
+- AWS SES
 - Any custom service
 
 This sample plugin submits emails to a webhook receiving service.
